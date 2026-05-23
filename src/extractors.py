@@ -357,6 +357,7 @@ def extract_features_from_csv_file(file_path, SAMPLING_RATE):
         "park_vector_std": park_vector_stats[1],
         "flux_current_phase_angle": flux_current_phase_angle,
         "negative_sequence_current": negative_sequence_current,
+        "class": int(file_path[9]),
     }
 
     return features_dict
@@ -369,3 +370,4 @@ if __name__ == "__main__":
     )
 
     print(len(features_dict))
+    print(features_dict)
